@@ -3,11 +3,11 @@ import { sequelize } from "./db.js";
 
 //import models
 import Season from "../models/seasonModel.js";
-// import gameType } from "../models/gameTypeModel.js";
-// import arena } from "../models/arenaModel.js";
+import GameType from "../models/gameTypeModel.js";
+import arena from "../models/arenaModel.js";
 import Team from "../models/teamModel.js";
 import Round from "../models/roundModel.js"; // season
-// import Player from "../models/playerModel.js"; // team
+import Player from "../models/playerModel.js"; // team
 // import ScoreAdjustment from "../models/scoreAdjustmentModel.js"; // round, team
 // import MatchTeam from "../models/matchTeamModel.js"; // player, team
 // import Matchup from "../models/matchupModel.js"; // round, match-team
