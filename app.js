@@ -1,16 +1,11 @@
-import { Sequelize } from 'sequelize'
-import dotenv from 'dotenv'
+import express from "express"
+import cors from "cors"
 
-// config method reads env file and sets up envioronment variables
-dotenv.config()
+const app = express()
 
+app.use(cors())
+app.use(express.json())
 
-console.log(process.env.DB_URI)
-const sequelize = new Sequelize(process.env.DB_URI)
+app.get('/', (req, res) => res.send({ info: 'Pinball League API' }))
 
-try {
-    await sequelize.authenticate();
-    console.log('Connection has been established successfully.');
-  } catch (error) {
-    console.error('Unable to connect to the database:', error);
-  }
+export default app
