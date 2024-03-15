@@ -1,4 +1,4 @@
-import { DataTypes } from 'sequelize'
+import { DataTypes } from "sequelize";
 import { sequelize } from "../controllers/db.js";
 
 /* 
@@ -21,6 +21,7 @@ const Team = sequelize.define(
     name: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true // Don't allow same team names
     },
     active: {
       type: DataTypes.BOOLEAN,
@@ -38,7 +39,7 @@ const Team = sequelize.define(
     },
   },
   {
-    underscored: true // keeps auto-generated attributes in snake case for PostgreSQL compatibility
+    underscored: true, // keeps auto-generated attributes in snake case for PostgreSQL compatibility
   }
 );
-export default Team
+export default Team;
