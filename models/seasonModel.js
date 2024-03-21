@@ -19,7 +19,7 @@ const Season = sequelize.define(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    Description: {
+    description: {
       type: DataTypes.STRING,
       // allowNull defaults to true
     },

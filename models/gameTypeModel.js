@@ -60,7 +60,8 @@ const GameType = sequelize.define(
     },
   },
   {
-    underscored: true, // keeps auto-generated attributes in snake case for PostgreSQL compatibility
+    underscored: true, // keeps auto-generated attributes in snake case for PostgreSQL compatibility,
+    timestamps: false 
   }
 );
 

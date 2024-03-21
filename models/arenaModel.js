@@ -17,6 +17,7 @@ const Arena = sequelize.define(
   },
   {
     underscored: true, // keeps auto-generated attributes in snake case for PostgreSQL compatibility
+    timestamps: false 
   }
 );
 
