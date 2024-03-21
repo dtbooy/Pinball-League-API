@@ -255,14 +255,370 @@ const teams = await Team.bulkCreate([
         password: "Mixmaster Millhouse",
         name: "Mixmaster Millhouse and the Easy Lovin, Travelling Ex Russian Olympic Break Dance Exstravaganza",
     },
+    {
+        active: false,
+        password: "Free Agents",
+        name: "Free Agents",
+    },
 ])
    
 // Seed table rounds
-
+const rounds = await Round.bulkCreate([
+    {
+        season_id: seasons.id,
+        round_number: 1
+    },
+    {
+        season_id: seasons.id,
+        round_number: 2
+    },
+    {
+        season_id: seasons.id,
+        round_number: 3
+    },
+    {
+        season_id: seasons.id,
+        round_number: 4
+    },
+    {
+        season_id: seasons.id,
+        round_number: 5
+    },
+    {
+        season_id: seasons.id,
+        round_number: 6
+    },
+    {
+        season_id: seasons.id,
+        round_number: 7
+    },
+    {
+        season_id: seasons.id,
+        round_number: 8
+    },
+    {
+        season_id: seasons.id,
+        round_number: 9
+    },
+])
 
 // Seed table players
+const players = await Player.bulkCreate([
+{
+    name: "Dirk Booy",
+    ifpa: 42278,
+    value: 5,
+    team_id: teams[0].id
+},
+{
+    name: "Michelle Riding",
+    ifpa: null,
+    value: 3,
+    team_id: teams[0].id
+},
+{
+    name: "Steven Riding",
+    ifpa: null,
+    value: 4,
+    team_id: teams[0].id
+},
+{
+    name: "Brett Wheeler",
+    ifpa: 51642,
+    value: 2,
+    team_id: teams[0].id
+},
+{
+    name: "Caitlan Christie",
+    ifpa: null,
+    value: 2,
+    team_id: teams[0].id
+},
+{
+    name: "Jason Lambert",
+    ifpa: null,
+    value: 6,
+    team_id: teams[1].id
+},
+{
+    name: "Kerrie McAloney",
+    ifpa: null,
+    value: 3,
+    team_id: teams[1].id
+},
+{
+    name: "Zach Kominar",
+    ifpa: null,
+    value: 3,
+    team_id: teams[1].id
+},
+{
+    name: "Erik Veland",
+    ifpa: null,
+    value: 3,
+    team_id: teams[1].id
+},
+{
+    name: "Brad Claire",
+    ifpa: null,
+    value: 3,
+    team_id: teams[1].id
+},
+{
+    name: "Tony Fischer",
+    ifpa: null,
+    value: 3,
+    team_id: teams[1].id
+},
+{
+    name: "Jesse Holt",
+    ifpa: null,
+    value: 5,
+    team_id: teams[2].id
+},
+{
+    name: "AJ Wildey",
+    ifpa: null,
+    value: 3,
+    team_id: teams[2].id
+},
+{
+    name: "Justin Thompson ",
+    ifpa: null,
+    value: 4,
+    team_id: teams[2].id
+},
+{
+    name: "Grant Clements ",
+    ifpa: null,
+    value: 3,
+    team_id: teams[2].id
+},
+{
+    name: "Tom Carey",
+    ifpa: null,
+    value: 5,
+    team_id: teams[2].id
+},
+{
+    name: "Justin Hallowes",
+    ifpa: null,
+    value: 4,
+    team_id: teams[2].id
+},
+{
+    name: "James Hulk",
+    ifpa: null,
+    value: 5,
+    team_id: teams[3].id
+},
+{
+    name: "Emily Jane Smith",
+    ifpa: null,
+    value: 4,
+    team_id: teams[3].id
+},
+{
+    name: "Dan Olejniczak",
+    ifpa: null,
+    value: 4,
+    team_id: teams[3].id
+},
+{
+    name: "Tris Veal ",
+    ifpa: null,
+    value: 1,
+    team_id: teams[3].id
+},
+{
+    name: "Dan Etiel",
+    ifpa: null,
+    value: 3,
+    team_id: teams[4].id
+},
+{
+    name: "Bobby Rein",
+    ifpa: null,
+    value: 2,
+    team_id: teams[4].id
+},
+{
+    name: "Luke Gallow",
+    ifpa: null,
+    value: 2,
+    team_id: teams[4].id
+},
+{
+    name: "Stuart Thornton",
+    ifpa: null,
+    value: 6,
+    team_id: teams[4].id
+},
+{
+    name: "Jonathan Chabowski",
+    ifpa: null,
+    value: 5,
+    team_id: teams[4].id
+},
+{
+    name: "Phil Dudley",
+    ifpa: null,
+    value: 4,
+    team_id: teams[5].id
+},
+{
+    name: "Michael Dodt",
+    ifpa: null,
+    value: 6,
+    team_id: teams[5].id
+},
+{
+    name: "Gary Eldershaw",
+    ifpa: null,
+    value: 4,
+    team_id: teams[5].id
+},
+{
+    name: "Chris Bancroft",
+    ifpa: null,
+    value: 2,
+    team_id: teams[5].id
+},
+{
+    name: "Chloe Musk",
+    ifpa: null,
+    value: 1,
+    team_id: teams[5].id
+},
+{
+    name: "Ivy  ",
+    ifpa: null,
+    value: 1,
+    team_id: teams[5].id
+},
+{
+    name: "Sheamus",
+    ifpa: null,
+    value: 1,
+    team_id: teams[5].id
+},
+{
+    name: "Escher Lefkoff",
+    ifpa: null,
+    value: 6,
+    team_id: teams[6].id
+},
+{
+    name: "Emily Cosson",
+    ifpa: null,
+    value: 5,
+    team_id: teams[6].id
+},
+{
+    name: "Pete Davidson",
+    ifpa: null,
+    value: 4,
+    team_id: teams[6].id
+},
+{
+    name: "Rhi Coolican (c)",
+    ifpa: null,
+    value: 2,
+    team_id: teams[6].id
+},
+{
+    name: "Sarah Stamp",
+    ifpa: null,
+    value: 3,
+    team_id: teams[6].id
+},
+{
+    name: "Alyssa Ford",
+    ifpa: null,
+    value: 1,
+    team_id: teams[6].id
+},
+{
+    name: "Joe Wade",
+    ifpa: null,
+    value: 5,
+    team_id: teams[7].id
+},
+{
+    name: "Emma King",
+    ifpa: null,
+    value: 3,
+    team_id: teams[7].id
+},
+{
+    name: "Katrina Pingnam",
+    ifpa: null,
+    value: 2,
+    team_id: teams[7].id
+},
+{
+    name: "Justine Cadell",
+    ifpa: null,
+    value: 2,
+    team_id: teams[7].id
+},
+{
+    name: "Timothy Craig",
+    ifpa: null,
+    value: 5,
+    team_id: teams[8].id
+},
+{
+    name: "Tom Fletcher",
+    ifpa: null,
+    value: 6,
+    team_id: teams[8].id
+},
+{
+    name: "Meg Hamilton",
+    ifpa: null,
+    value: 1,
+    team_id: teams[8].id
+},
+{
+    name: "Michelle O'Flanagan",
+    ifpa: null,
+    value: 1,
+    team_id: teams[8].id
+},
+{
+    name: "Greg F",
+    ifpa: null,
+    value: 5,
+    team_id: teams[9].id
+},
+{
+    name: "Michael S",
+    ifpa: null,
+    value: 3,
+    team_id: teams[9].id
+},
+{
+    name: "Ross ",
+    ifpa: null,
+    value: 3,
+    team_id: teams[9].id
+},
+{
+    name: "Jason M",
+    ifpa: null,
+    value: 3,
+    team_id: teams[9].id
+},
+])
+
 // Seed table score_adjustment
+
 // Seed table match_team
+
 // Seed table matchup
+
 // Seed table game
+
 // Seed table results
+
