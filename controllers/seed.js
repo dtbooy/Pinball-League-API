@@ -201,3 +201,68 @@ const arenas = await Arena.bulkCreate([
   }
 ])
 
+// Seed table teams
+const teams = await Team.bulkCreate([
+    {
+        active: true,
+        img_url: "readyPlayer.png",
+        password: "Ready Player",
+        description: "A description",
+        name: "Ready Player",
+    },
+    {
+        active: true,
+        password: "Press Tart",
+        name: "Press Tart",
+    },
+    {
+        active: true,
+        password: "Tilty as Charged",
+        name: "Tilty as Charged",
+    },
+    {
+        active: true,
+        password: "The Cunning Stunts!",
+        name: "The Cunning Stunts!",
+    },
+    {
+        active: true,
+        password: "Flipadelphia",
+        name: "Flipadelphia",
+    },
+    {
+        active: true,
+        password: "SWL 4.0",
+        name: "SWL 4.0",
+    },
+    {
+        active: true,
+        password: "Two Extra Balls",
+        name: "Two Extra Balls",
+    },
+    {
+        active: true,
+        password: "Pin Chickens",
+        name: "Pin Chickens",
+    },
+    {
+        active: true,
+        password: "The Pindingo's",
+        name: "The Pindingo's",
+    },
+    {
+        active: true,
+        password: "Mixmaster Millhouse",
+        name: "Mixmaster Millhouse and the Easy Lovin, Travelling Ex Russian Olympic Break Dance Exstravaganza",
+    },
+])
+   
+// Seed table rounds
+
+
+// Seed table players
+// Seed table score_adjustment
+// Seed table match_team
+// Seed table matchup
+// Seed table game
+// Seed table results
